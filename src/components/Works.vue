@@ -3,10 +3,10 @@
     <div class="main">
       <ul class="works__list">
         <li v-for="(work, i) in works" class="works__item" @click="changeWork(i)">
-          <h2>{{ work.title }}</h2>
+          <h2>{{ work.title2 }}</h2>
         </li>
       </ul>
-      <h1 class="main__title">{{ works[workIndex].title }}</h1>
+      <h1 class="main__title">{{ works[workIndex].title1 }}</h1>
       <p class="main__description">{{ works[workIndex].description }}</p>
       <ul class="main__skillList">
         <li v-for="skill in works[workIndex].skills" class="main__skillItem">
@@ -23,17 +23,20 @@ export default {
       workIndex: 0,
       works: [
         {
-          title: 'Work1',
+          title1: 'EngineerSNS',
+          title2: 'Work1',
           description: 'HTMLとCSSとJavaScript',
           skills: ['EngineerSNS.png']
         },
         {
-          title: 'Work2',
+          title1: '秘密の匿名掲示板',
+          title2: 'Work2',
           description: 'HTMLとCSSとJavaScriptとjQueryを使って頑張った！',
           skills: ['html5.png', 'css3.png', 'javascript.png', 'jquery.png']
         },
         {
-          title: 'Work3',
+          title1: 'MyPortfolio!',
+          title2: 'Work3',
           description: 'HTMLとCSSとSassとVueを使って頑張った！',
           skills: ['html5.png', 'css3.png', 'sass.png', 'vue.png']
         }

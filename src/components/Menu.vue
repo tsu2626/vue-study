@@ -2,7 +2,11 @@
   <div class="menu">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css">
     <div class="top">
-      <router-link to="/" class="menu__link">MyPortfolio!</router-link>
+      <router-link to="/" class="menu__link" >
+        <div class="main_icon">
+          <img :src="icon" alt="icon" width="200px" height="200px">  
+        </div>
+      </router-link>
     </div>
     <div class="menu_items">
       <div class="works">
@@ -22,12 +26,13 @@
 export default {
   data(){
     return{
+      icon: require('../assets/icon.png')
     };
   }
 }
 </script>
 <style lang="scss" scoped>
-$menuHeight: 60px;
+$menuHeight: 100px;
 .menu {
   background-color: #333;
   height: $menuHeight;
@@ -37,19 +42,23 @@ $menuHeight: 60px;
     height: $menuHeight;
     line-height: $menuHeight;
     color: white;
-    width: 100px;
+    width: 200px;
     border-right: 1px solid white;
     border-left: 1px solid white;
+    font-size: 200%;
       &:hover {
         background-color: #444;
       }
     }
 }
+.menu_icon{
+   float: left;
+}
 .menu{
   
 }
 .top{
-  font-size: 80%;
+
 }
 .menu_items{
   display: flex;

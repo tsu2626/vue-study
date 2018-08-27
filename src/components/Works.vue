@@ -1,18 +1,22 @@
 <template>
   <div class="works">
     <div class="main">
-      <ul class="works__list">
-        <li v-for="(work, i) in works" class="works__item" @click="changeWork(i)">
-          <h2>{{ work.title2 }}</h2>
-        </li>
-      </ul>
-      <h1 class="main__title">{{ works[workIndex].title1 }}</h1>
-      <p class="main__description">{{ works[workIndex].description }}</p>
-      <ul class="main__skillList">
-        <li v-for="skill in works[workIndex].skills" class="main__skillItem">
-          <img :src="require(`@/assets/${skill}`)">
-        </li>
-      </ul>     
+      <div class="main__body">
+        <ul class="works__list">
+          <li v-for="(work, i) in works" class="works__item" @click="changeWork(i)">
+            <h2>{{ work.title2 }}</h2>
+          </li>
+        </ul>
+        <div class="title_descri">
+          <h1 class="main__title">{{ works[workIndex].title1 }}</h1>
+          <p class="main__description">{{ works[workIndex].description }}</p>
+        </div>
+        <ul class="main__skillList">
+          <li v-for="skill in works[workIndex].skills" class="main__skillItem">
+            <img :src="require(`@/assets/${skill}`)">
+          </li>
+        </ul>  
+      </div>
     </div>   
   </div>
 </template>
@@ -53,12 +57,16 @@ export default {
 <style lang="scss" scoped>
 .main {
   // padding-bottom: 100px;
-  background-color: #fbf3f0;
-  border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
+  background-color: #fbf3f0 !important;
+  &__body{
+    // position: absolute;
+    // top: 20%;
+  }
   &__title {
     text-align: center;
     margin-top: 0px !important;
+    margin-bottom: 0px;
   }
   &__description {
     margin: 0 auto 20px;
@@ -73,23 +81,28 @@ export default {
     }
     &Item {
       margin-left: 10%;
+      position: relative;
+      right: 10%;
       img {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
         object-fit: contain;
       }
     }
   }
 }
 .main__title{
-  padding-right: 65%;
+  padding-right: 50%;
   font-size: 300%;
   margin-top: 2%;
 }
 .main__description{
-  padding-right: 60%;
+  padding-right: 45%;
   font-size: 150%;
 }
+// .title_descri{
+//     padding-right: 55%;
+// }
 .works {
   &__list {
     margin: 0 auto;

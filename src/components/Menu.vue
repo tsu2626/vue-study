@@ -4,9 +4,12 @@
     <div class="top">
       <router-link to="/" class="menu__link" >
         <div class="main_icon">
-          <img :src="icon" alt="icon" width="200px" height="200px">  
+          <img :src="icon" alt="icon" width="100%" height="100%">
         </div>
       </router-link>
+    </div>
+    <div class="menu__link">
+      <p class="title">MyPortfolio!</p>
     </div>
     <div class="menu_items">
       <div class="works">
@@ -34,29 +37,41 @@ export default {
 <style lang="scss" scoped>
 $menuHeight: 100px;
 .menu {
-  background-color: #333;
+  border-bottom: solid 2px #8ccac1;
+  background-color: #f1f1f1;
   height: $menuHeight;
   &__link {
     float: left;
     text-align: center;
     height: $menuHeight;
     line-height: $menuHeight;
-    color: white;
-    width: 200px;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
-    font-size: 200%;
+    color: #18455a;
+    width: $menuHeight;
+    // border-right: 1px solid #f1f1f1;
+    // border-left: 1px solid #f1f1f1;
+    font-size: 30px;
       &:hover {
-        background-color: #444;
+        background-color: #f1f1f1;
       }
     }
 }
 .menu_icon{
    float: left;
+   width: 50%;
+   height: 50%;
 }
 .menu{
   
 }
+.title{
+  background-color:#f1f1f1 !important;
+  padding: 0px;
+  margin: 0px;
+  font-size: 100%;
+  width: 200%;
+  color: #18455a;
+}
+
 .top{
 
 }

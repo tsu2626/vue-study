@@ -53,11 +53,12 @@ export default {
 <style lang="scss" scoped>
 .main {
   // padding-bottom: 100px;
+  background-color: #fbf3f0;
   border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
   &__title {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0px !important;
   }
   &__description {
     margin: 0 auto 20px;
@@ -66,14 +67,13 @@ export default {
   }
   &__skill {
     &List {
+      width:100%;
       display: flex;
       justify-content: center;
     }
     &Item {
-      margin: 0 5px;
+      margin-left: 10%;
       img {
-        // width: 1000px;
-        // height: 500px;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -83,7 +83,7 @@ export default {
 }
 .main__title{
   padding-right: 65%;
-  font-size: 400%;
+  font-size: 300%;
   margin-top: 2%;
 }
 .main__description{
@@ -101,19 +101,22 @@ export default {
     width: 0%;
     display: block;
     float: left;
-    position: relative;
-    top: 530px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
   }
   &__item {
     border: 1px solid #ddd;
     text-align: center;
-    margin: 0 100px;
-    width: 100px;
-    height: 100px;
+    margin: 0 100%;
+    width: 100%;
+    height: 100%;
     line-height: 100%;
     vertical-align: middle;
     float: left;
     cursor: pointer;
+    position: relative;
+
    left:50%;
     &:hover {
       background-color: #eee;

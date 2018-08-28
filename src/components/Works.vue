@@ -115,7 +115,7 @@ export default {
     display: block;
     float: left;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 5%;
   }
   &__item {
@@ -129,11 +129,25 @@ export default {
     float: left;
     cursor: pointer;
     position: relative;
-
-   left:50%;
+    left:50%;
     &:hover {
       background-color: #eee;
     }
   }
+}
+h2{
+  color: #505050;/*文字色*/
+  padding: 0.5em;/*文字周りの余白*/
+  display: inline-block;/*おまじない*/
+  line-height: 1.3;/*行高*/
+  background: #8ccac1;/*背景色*/
+  vertical-align: middle;/*上下中央*/
+  border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+}
+
+h2:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
 }
 </style>

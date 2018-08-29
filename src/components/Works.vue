@@ -7,15 +7,17 @@
             <h2>{{ work.title2 }}</h2>
           </li>
         </ul>
-        <div class="title_descri">
-          <h1 class="main__title">{{ works[workIndex].title1 }}</h1>
-          <p class="main__description">{{ works[workIndex].description }}</p>
-        </div>
-        <ul class="main__skillList">
-          <li v-for="skill in works[workIndex].skills" class="main__skillItem">
-            <img :src="require(`@/assets/${skill}`)">
-          </li>
-        </ul>  
+        <div class="contents">
+          <div class="title_descri">
+            <h1 class="main__title">{{ works[workIndex].title1 }}</h1>
+            <p class="main__description">{{ works[workIndex].description }}</p>
+          </div>
+          <ul class="main__skillList">
+            <li v-for="skill in works[workIndex].skills" class="main__skillItem">
+              <img :src="require(`@/assets/${skill}`)">
+            </li>
+          </ul>
+        </div>  
       </div>
     </div>   
   </div>
@@ -119,7 +121,7 @@ export default {
     left: 5%;
   }
   &__item {
-    border: 1px solid #ddd;
+    border: 1px solid #fbf3f0;
     text-align: center;
     margin: 0 100%;
     width: 100%;
@@ -149,5 +151,8 @@ h2:before {
   content: '●';
   color: white;
   margin-right: 8px;
+}
+.contents{
+  padding-top: 3%;
 }
 </style>

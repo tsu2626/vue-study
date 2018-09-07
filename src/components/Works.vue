@@ -3,17 +3,17 @@
     <div class="main">
       <div class="main__body">
         <ul class="works__list">
-          <li v-for="(work, i) in works" class="works__item" @click="changeWork(i)">
+          <li v-for="(work, i) in works" :key="work.title2" class="works__item" @click="changeWork(i)">
             <h2>{{ work.title2 }}</h2>
           </li>
         </ul>
         <div class="contents">
           <div class="title_descri">
-            <h1 class="main__title">{{ works[workIndex].title1 }}</h1>
+            <h1 class="main__title">{{ works[workIndex].title2 }}</h1>
             <p class="main__description">{{ works[workIndex].description }}</p>
           </div>
           <ul class="main__skillList">
-            <li v-for="skill in works[workIndex].skills" class="main__skillItem">
+            <li v-for="(skill. id) in works[workIndex].skills"　:key＝"skill.id" class="main__skillItem">
               <img :src="require(`@/assets/${skill}`)">
             </li>
           </ul>
@@ -29,19 +29,19 @@ export default {
       workIndex: 0,
       works: [
         {
-          title1: 'EngineerSNS',
+          // title1: 'EngineerSNS',
           title2: 'Work1',
           description: 'HTMLとCSSとJavaScript',
           skills: ['EngineerSNS.png']
         },
         {
-          title1: '秘密の匿名掲示板',
+          // title1: '秘密の匿名掲示板',
           title2: 'Work2',
           description: 'HTMLとCSSとJavaScriptとjQueryを使って頑張った！',
           skills: ['html5.png', 'css3.png', 'javascript.png', 'jquery.png']
         },
         {
-          title1: 'MyPortfolio!',
+          // title1: 'MyPortfolio!',
           title2: 'Work3',
           description: 'HTMLとCSSとSassとVueを使って頑張った！',
           skills: ['html5.png', 'css3.png', 'sass.png', 'vue.png']
